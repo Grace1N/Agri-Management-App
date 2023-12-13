@@ -1,11 +1,10 @@
 package com.example.agrimanagementapp.ui.theme.screens.products
 
-import android.Manifest
+
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.provider.MediaStore
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -108,12 +107,12 @@ fun ContactScreen(navController: NavHostController){
             val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "0707826579"))
             if (ContextCompat.checkSelfPermission(
                     context,
-                    Manifest.permission.CALL_PHONE
+                    android.Manifest.permission.CALL_PHONE
                 ) != PackageManager.PERMISSION_GRANTED
             ) {
                 ActivityCompat.requestPermissions(
                     context as Activity,
-                    arrayOf<String>(Manifest.permission.CALL_PHONE),
+                    arrayOf<String>(android.Manifest.permission.CALL_PHONE),
                     1
                 )
             } else {

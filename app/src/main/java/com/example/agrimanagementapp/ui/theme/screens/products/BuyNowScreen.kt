@@ -1,7 +1,11 @@
 package com.example.agrimanagementapp.ui.theme.screens.products
 
 
+import android.Manifest
+import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -36,6 +40,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.agrimanagementapp.R
@@ -110,6 +116,7 @@ fun BuyNowScreen(navController: NavHostController){
             colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Red)) {
             Text(text = "GO BACK")
         }
+
         Spacer(modifier = Modifier.height(170.dp))
         BottomAppBar(
             modifier = Modifier
